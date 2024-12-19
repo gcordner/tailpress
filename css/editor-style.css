@@ -1,5 +1,7 @@
 .container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
     padding-right: 1rem;
     padding-left: 1rem
 }
@@ -20,9 +22,7 @@
 }
 @media (min-width: 960px) {
     .container {
-        max-width: 960px;
-        padding-right: 0rem;
-        padding-left: 0rem
+        max-width: 960px
     }
 }
 @media (min-width: 1024px) {
@@ -30,9 +30,9 @@
         max-width: 1024px
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
     .container {
-        max-width: 1440px
+        max-width: 1280px
     }
 }
 .m-8 {
@@ -109,7 +109,7 @@
     max-width: 100%
 }
 .max-w-screen-md {
-    max-width: 782px
+    max-width: 600px
 }
 .max-w-sm {
     max-width: 24rem
@@ -363,7 +363,7 @@
 }
 .alignwide {
     margin: 2rem 0;
-    max-width: 1024px !important
+    max-width: undefined !important
 }
 .alignnone {
     margin-left: 0px;
@@ -375,7 +375,7 @@
     margin: 0.5rem auto;
     display: block
 }
-@media (min-width: 600px) {
+@media (min-width: 480px) {
     .alignleft:not(.wp-block-button) {
         margin-right: 0.5rem;
         float: left
@@ -407,12 +407,13 @@
 body {
     font-family: IBM Plex Sans, sans-serif
 }
-.wp-block {
-    max-width: 1024px
+/* .wp-block{
+    @apply max-w-screen-xl;
 }
+
 .wp-block[data-align=wide] {
-    max-width: 1024px
-}
+    @apply max-w-screen-xl;
+} */
 .wp-block[data-align=full] {
     max-width: 100%
 }
@@ -435,7 +436,7 @@ body {
 .focus\:ring-offset-white:focus {
     --tw-ring-offset-color: #fff
 }
-@media (min-width: 600px) {
+@media (min-width: 480px) {
     .sm\:w-auto {
         width: auto
     }
@@ -444,7 +445,7 @@ body {
         padding-right: 2rem
     }
 }
-@media (min-width: 782px) {
+@media (min-width: 600px) {
     .md\:my-6 {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem
@@ -467,7 +468,7 @@ body {
         line-height: 2.25rem
     }
 }
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
     .lg\:-mx-4 {
         margin-left: -1rem;
         margin-right: -1rem

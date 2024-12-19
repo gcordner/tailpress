@@ -14,9 +14,17 @@ module.exports = {
     ],
     theme: {
         container: {
+            center: true, // optional, if you want to center the container
             padding: {
                 DEFAULT: '1rem',
-                lg: '0rem'
+            },
+            screens: {
+                sm: '480px',
+                md: '600px',
+                mdl: '782px',  // use custom breakpoint names if needed
+                lg: '960px',
+                xl: '1024px',
+                '2xl': '1280px',
             },
         },
         extend: {
@@ -29,12 +37,10 @@ module.exports = {
 
         },
         screens: {
-            xs: '480px',
-            sm: '600px',
-            md: '782px',
-            lg: tailpress.theme('settings.layout.contentSize', theme),
-            xl: tailpress.theme('settings.layout.wideSize', theme),
-            '2xl': '1440px'
+            sm: '480px',
+            md: '600px',
+            mdl: '782px',  // use custom breakpoint names if needed
+            lg: '1280px',
         }
     },
     plugins: [
