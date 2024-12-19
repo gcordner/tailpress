@@ -10,9 +10,7 @@
 }
 @media (min-width: 600px) {
     .container {
-        max-width: 600px;
-        padding-right: 2rem;
-        padding-left: 2rem
+        max-width: 600px
     }
 }
 @media (min-width: 782px) {
@@ -107,6 +105,9 @@
 .w-full {
     width: 100%
 }
+.max-w-full {
+    max-width: 100%
+}
 .max-w-screen-md {
     max-width: 782px
 }
@@ -139,6 +140,12 @@
 }
 .justify-between {
     justify-content: space-between
+}
+.overflow-hidden {
+    overflow: hidden
+}
+.overflow-x-hidden {
+    overflow-x: hidden
 }
 .rounded {
     border-radius: 0.25rem
@@ -209,10 +216,6 @@
 }
 .p-4 {
     padding: 1rem
-}
-.px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem
 }
 .px-3 {
     padding-left: 0.75rem;
@@ -436,6 +439,10 @@ body {
     .sm\:w-auto {
         width: auto
     }
+    .sm\:px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem
+    }
 }
 @media (min-width: 782px) {
     .md\:my-6 {
@@ -450,6 +457,10 @@ body {
     }
     .md\:w-\[125px\] {
         width: 125px
+    }
+    .md\:px-12 {
+        padding-left: 3rem;
+        padding-right: 3rem
     }
     .md\:text-3xl {
         font-size: 1.875rem;
