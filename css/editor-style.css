@@ -20,22 +20,28 @@
         max-width: 782px
     }
 }
-@media (min-width: 960px) {
+@media (min-width: 1024px) {
     .container {
-        max-width: 960px;
+        max-width: 1024px;
         padding-right: 0rem;
         padding-left: 0rem
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .container {
-        max-width: 1024px
+        max-width: 1280px
     }
 }
 @media (min-width: 1440px) {
     .container {
         max-width: 1440px
     }
+}
+.static {
+    position: static
+}
+.relative {
+    position: relative
 }
 .m-8 {
     margin: 2rem
@@ -360,7 +366,7 @@
 }
 .alignwide {
     margin: 2rem 0;
-    max-width: 1024px !important
+    max-width: 1280px !important
 }
 .alignnone {
     margin-left: 0px;
@@ -405,10 +411,10 @@ body {
     font-family: IBM Plex Sans, sans-serif
 }
 .wp-block {
-    max-width: 1024px
+    max-width: 1280px
 }
 .wp-block[data-align=wide] {
-    max-width: 1024px
+    max-width: 1280px
 }
 .wp-block[data-align=full] {
     max-width: 100%
@@ -456,7 +462,7 @@ body {
         line-height: 2.25rem
     }
 }
-@media (min-width: 960px) {
+@media (min-width: 1024px) {
     .lg\:-mx-4 {
         margin-left: -1rem;
         margin-right: -1rem
