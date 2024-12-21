@@ -30,10 +30,10 @@
 
 	<?php do_action( 'tailpress_header' ); ?>
 
-	<header>
+	<header class="sticky top-0 bg-white z-50 border-b py-2">
+	<div class="container mx-auto max-w-full xs:max-w-[480px] sm:max-w-[600px] md:max-w-[782px] lg:max-w-[1024px] xl:max-w-[1280px] px-4">
 
-		<div class="mx-auto container">
-			<div class="lg:flex lg:justify-between lg:items-center border-b py-6">
+			<div class="lg:flex lg:justify-between lg:items-center">
 				<div class="flex justify-between items-center">
 				<div class="w-[100px] md:w-[125px]">
 						<?php if ( has_custom_logo() ) { ?>
