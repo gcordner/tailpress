@@ -14,9 +14,24 @@
           "color": "#B9905F"
         },
         {
+          "name": "Desert Sand",
+          "slug": "desert-sand",
+          "color": "#D9AB73"
+        },
+        {
           "name": "Eggshell White",
           "slug": "white",
           "color": "#FAFAF9"
+        },
+        {
+          "name": "Parchment",
+          "slug": "parchment",
+          "color": "#E4E7DC"
+        },
+        {
+          "name": "Mocha",
+          "slug": "mocha",
+          "color": "#735C40"
         },
         {
           "name": "Tobacco Brown",
@@ -24,19 +39,14 @@
           "color": "#504027"
         },
         {
-          "name": "Dark",
-          "slug": "dark",
-          "color": "#1F2937"
+          "name": "Espresso",
+          "slug": "grey-800",
+          "color": "#3d2f1f"
         },
         {
           "name": "Obsidian",
           "slug": "obsidian",
           "color": "#262425"
-        },
-        {
-          "name": "Light",
-          "slug": "light",
-          "color": "#000000"
         }
       ]
     },

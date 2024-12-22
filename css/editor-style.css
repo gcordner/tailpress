@@ -181,13 +181,13 @@
     --tw-bg-opacity: 1;
     background-color: rgb(229 231 235 / var(--tw-bg-opacity))
 }
-.bg-gray-50 {
+.bg-obsidian {
     --tw-bg-opacity: 1;
-    background-color: rgb(249 250 251 / var(--tw-bg-opacity))
+    background-color: rgb(38 36 37 / var(--tw-bg-opacity))
 }
-.bg-gray-900 {
+.bg-parchment {
     --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity))
+    background-color: rgb(228 231 220 / var(--tw-bg-opacity))
 }
 .bg-primary {
     --tw-bg-opacity: 1;
@@ -315,10 +315,6 @@
 .text-blue-500 {
     --tw-text-opacity: 1;
     color: rgb(59 130 246 / var(--tw-text-opacity))
-}
-.text-gray-500 {
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity))
 }
 .text-gray-600 {
     --tw-text-opacity: 1;
