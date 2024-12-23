@@ -22,10 +22,13 @@ module.exports = {
         },
         extend: {
             colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
-            fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
+            fontSize: {
+                ...tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme)),
+                menu: '1.1rem', // Add custom font size here
+            },
             fontFamily: {
-                sans: ['IBM Plex Sans', 'sans-serif'],
-                'open-sans-condensed': ['"Open Sans Condensed"', 'sans-serif'],
+                sans: ['IBM Plex Sans', 'sans-serif'], // Default base font
+                'sans-condensed': ['Sofia Sans Extra Condensed', 'sans-serif'], // Custom font for menu
             },
 
         },
