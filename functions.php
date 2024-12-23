@@ -1,7 +1,14 @@
 <?php
+/**
+ * Tailpress functions and definitions
+ *
+ * @package Tailpress
+ */
 
 /**
- * Theme setup.
+ * Set up theme defaults and registers support for various WordPress features.
+ *
+ * @return void
  */
 function tailpress_setup() {
 	add_theme_support( 'title-tag' );
@@ -23,7 +30,7 @@ function tailpress_setup() {
 		)
 	);
 
-    add_theme_support( 'custom-logo' );
+	add_theme_support( 'custom-logo' );
 	add_theme_support( 'post-thumbnails' );
 
 	add_theme_support( 'align-wide' );
@@ -44,7 +51,7 @@ function tailpress_enqueue_scripts() {
 	$theme = wp_get_theme();
 
 	wp_enqueue_style( 'tailpress', tailpress_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tailpress', tailpress_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'tailpress', tailpress_asset( 'js/app.js' ), array(), $theme->get( 'Version' ), true );
 }
 
 add_action( 'wp_enqueue_scripts', 'tailpress_enqueue_scripts' );
@@ -52,7 +59,7 @@ add_action( 'wp_enqueue_scripts', 'tailpress_enqueue_scripts' );
 /**
  * Get asset path.
  *
- * @param string  $path Path to asset.
+ * @param string $path Path to asset.
  *
  * @return string
  */
@@ -61,7 +68,7 @@ function tailpress_asset( $path ) {
 		return get_stylesheet_directory_uri() . '/' . $path;
 	}
 
-	return add_query_arg( 'time', time(),  get_stylesheet_directory_uri() . '/' . $path );
+	return add_query_arg( 'time', time(), get_stylesheet_directory_uri() . '/' . $path );
 }
 
 /**
@@ -70,6 +77,7 @@ function tailpress_asset( $path ) {
  * @param string  $classes String of classes.
  * @param mixed   $item The current item.
  * @param WP_Term $args Holds the nav menu arguments.
+ * @param int     $depth Depth of menu.
  *
  * @return array
  */
@@ -91,8 +99,8 @@ add_filter( 'nav_menu_css_class', 'tailpress_nav_menu_add_li_class', 10, 4 );
  * Adds option 'submenu_class' to 'wp_nav_menu'.
  *
  * @param string  $classes String of classes.
- * @param mixed   $item The current item.
  * @param WP_Term $args Holds the nav menu arguments.
+ * @param int     $depth Depth of menu.
  *
  * @return array
  */
@@ -109,10 +117,18 @@ function tailpress_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3 );
-
-function add_menu_link_classes($atts, $item, $args) {
-    // Add the custom classes to the <a> tag
-    $atts['class'] = 'transition duration-200 border-b-2 border-transparent hover:border-primary hover:text-primary active:border-primary active:text-primary';
-    return $atts;
+/**
+ * Adds option 'link_class' to 'wp_nav
+ *
+ * @param array   $atts The HTML attributes applied to the menu item's <a> element.
+ * @param WP_Term $item The current menu item.
+ * @param WP_Term $args An object of wp_nav_menu() arguments.
+ *
+ * @return array
+ */
+function add_menu_link_classes( $atts, $item, $args ) {
+	// Add the custom classes to the <a> tag.
+	$atts['class'] = 'transition duration-200 border-b-2 border-transparent hover:border-primary hover:text-primary active:border-primary active:text-primary';
+	return $atts;
 }
-add_filter('nav_menu_link_attributes', 'add_menu_link_classes', 10, 3);
+add_filter( 'nav_menu_link_attributes', 'add_menu_link_classes', 10, 3 );
