@@ -166,9 +166,12 @@
 .border-b {
     border-bottom-width: 1px
 }
+.border-b-2 {
+    border-bottom-width: 2px
+}
 .border-primary {
     --tw-border-opacity: 1;
-    border-color: rgb(185 144 95 / var(--tw-border-opacity))
+    border-color: rgb(150 118 79 / var(--tw-border-opacity))
 }
 .border-transparent {
     border-color: transparent
@@ -191,7 +194,7 @@
 }
 .bg-primary {
     --tw-bg-opacity: 1;
-    background-color: rgb(185 144 95 / var(--tw-bg-opacity))
+    background-color: rgb(150 118 79 / var(--tw-bg-opacity))
 }
 .bg-white {
     --tw-bg-opacity: 1;
@@ -259,6 +262,9 @@
 .text-center {
     text-align: center
 }
+.font-sans-condensed {
+    font-family: Sofia Sans Extra Condensed, sans-serif
+}
 .text-2xl {
     font-size: 1.5rem;
     line-height: 2rem
@@ -274,6 +280,9 @@
 .text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem
+}
+.text-menu {
+    font-size: 1.1rem
 }
 .text-sm {
     font-size: 0.875rem;
@@ -334,7 +343,7 @@
 }
 .text-primary {
     --tw-text-opacity: 1;
-    color: rgb(185 144 95 / var(--tw-text-opacity))
+    color: rgb(150 118 79 / var(--tw-text-opacity))
 }
 .text-secondary {
     --tw-text-opacity: 1;
@@ -351,6 +360,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
 }
+.transition {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
 .transition-colors {
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -358,6 +374,9 @@
 }
 .duration-200 {
     transition-duration: 200ms
+}
+.duration-300 {
+    transition-duration: 300ms
 }
 .alignfull {
     margin: 2rem calc(50% - 50vw) !important;
@@ -419,6 +438,14 @@ body {
 .wp-block[data-align=full] {
     max-width: 100%
 }
+.hover\:border-primary:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(150 118 79 / var(--tw-border-opacity))
+}
+.hover\:text-primary:hover {
+    --tw-text-opacity: 1;
+    color: rgb(150 118 79 / var(--tw-text-opacity))
+}
 .focus\:outline-none:focus {
     outline: 2px solid transparent;
     outline-offset: 2px
@@ -428,15 +455,23 @@ body {
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
 }
-.focus\:ring-gray-900:focus {
+.focus\:ring-obsidian:focus {
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(17 24 39 / var(--tw-ring-opacity))
+    --tw-ring-color: rgb(38 36 37 / var(--tw-ring-opacity))
 }
 .focus\:ring-offset-2:focus {
     --tw-ring-offset-width: 2px
 }
 .focus\:ring-offset-white:focus {
     --tw-ring-offset-color: #FAFAF9
+}
+.active\:border-primary:active {
+    --tw-border-opacity: 1;
+    border-color: rgb(150 118 79 / var(--tw-border-opacity))
+}
+.active\:text-primary:active {
+    --tw-text-opacity: 1;
+    color: rgb(150 118 79 / var(--tw-text-opacity))
 }
 @media (min-width: 480px) {
     .xs\:max-w-\[480px\] {

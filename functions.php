@@ -109,3 +109,10 @@ function tailpress_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3 );
+
+function add_menu_link_classes($atts, $item, $args) {
+    // Add the custom classes to the <a> tag
+    $atts['class'] = 'transition duration-200 border-b-2 border-transparent hover:border-primary hover:text-primary active:border-primary active:text-primary';
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'add_menu_link_classes', 10, 3);

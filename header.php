@@ -68,14 +68,16 @@
 				<?php
 				wp_nav_menu(
 					array(
-						'container_id'    => 'primary-menu',
-						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
-						'menu_class'      => 'lg:flex lg:-mx-4',
-						'theme_location'  => 'primary',
-						'li_class'        => 'lg:mx-4',
-						'fallback_cb'     => false,
+					  'container_id'    => 'primary-menu',
+					  'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
+					  'menu_class'      => 'lg:flex lg:-mx-4 font-sans-condensed uppercase text-menu',
+					  'theme_location'  => 'primary',
+					  'li_class'        => 'lg:mx-4',
+					  'link_class'      => 'transition duration-300 border-b-2 border-transparent hover:border-primary hover:text-primary active:border-primary active:text-primary',
+					  'fallback_cb'     => false,
 					)
-				);
+				  );
+				  
 				?>
 			</div>
 		</div>
@@ -94,7 +96,7 @@
 							point for developing WordPress themes with Tailwind CSS and comes with basic block-editor support out
 							of the box.</p>
 						<a href="https://github.com/jeffreyvr/tailpress"
-							class="w-full sm:w-auto flex-none bg-obsidian text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">View
+							class="w-full sm:w-auto flex-none bg-obsidian text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-obsidian focus:outline-none transition-colors duration-200">View
 							on GitHub</a>
 					</div>
 				</div>

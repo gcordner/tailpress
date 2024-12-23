@@ -41,4 +41,10 @@ article > *:not(.entry-content),
     }
 }
 
+.current-menu-item > a {
+    @apply border-primary text-primary;
+  }
+  
+  
+
 
